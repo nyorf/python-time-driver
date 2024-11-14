@@ -18,7 +18,7 @@ The repository will try to keep up with the master of https://github.com/matterm
 
 If something changes, it is most likely to change because the official mattermost api changed.
 
-Python 3.6 or later is required.
+Python 3.5 or later is required.
 
 Installation
 ------------
@@ -97,20 +97,20 @@ Usage
         'request_timeout': None,
 
         """
-        To keep the websocket connection alive even if it gets disconnected for some reason you
+        To keep the websocket connection alive even if it gets disconnected for some reason you 
         can set the  keepalive option to True. The keepalive_delay defines how long to wait in seconds
-        before attempting to reconnect the websocket.
+        before attempting to reconnect the websocket. 
         """
         'keepalive': False,
         'keepalive_delay': 5,
 
         """
         This option allows you to provide additional keyword arguments when calling websockets.connect()
-        By default it is None, meaning we will not add any additional arguments. An example of an
+        By default it is None, meaning we will not add any additional arguments. An example of an 
         additional argument you can pass is one used to  disable the client side pings:
         'websocket_kw_args': {"ping_interval": None},
         """
-        'websocket_kw_args': None,
+        'websocket_kw_args': None
 
         """
         Setting debug to True, will activate a very verbose logging.
@@ -120,7 +120,7 @@ Usage
         Be careful. This SHOULD NOT be active in production, because this logs a lot!
         Even the password for your account when doing driver.login()!
         """
-        'debug': False
+        'debug': False,
     })
 
     """
@@ -180,8 +180,8 @@ Usage
     # To upload a file you will need to pass a `files` dictionary
     channel_id = foo.channels.get_channel_by_name_and_team_name('team', 'channel')['id']
     file_id = foo.files.upload_file(
-        channel_id=channel_id,
-        files={'files': (filename, open(filename, 'rb'))}
+        channel_id=channel_id
+        files={'files': (filename, open(filename))}
     )['file_infos'][0]['id']
 
 

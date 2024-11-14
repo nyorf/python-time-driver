@@ -1,10 +1,3 @@
-Unreleased
-'''''''''''
-
-Added
-- HTTP proxy support for http + websocket calls
-  - Websocket calls are now using aiohttp
-
 7.3.2
 ''''''
 Fixed
