@@ -6,7 +6,7 @@ import logging
 import requests
 import netrc
 
-from mattermostdriver import Driver
+from timedriver import Driver
 
 logging.basicConfig( format='%(levelname)s - %(name)s - %(asctime)s - %(message)s' )
 logger = logging.getLogger( 'MattermostManager' )

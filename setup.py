@@ -13,19 +13,19 @@ readme_file = os.path.join(root_dir, 'README.rst')
 with open(readme_file, encoding='utf-8') as f:
 	long_description = f.read()
 
-version_module = os.path.join(root_dir, 'src', 'mattermostdriver', 'version.py')
+version_module = os.path.join(root_dir, 'src', 'timedriver', 'version.py')
 with open(version_module, encoding='utf-8') as f:
 	exec(f.read())
 
 
 setup(
-	name='mattermostdriver',
+	name='timedriver',
 	version=full_version,
-	description='A Python Mattermost Driver',
+	description='A Python TiMe messenger driver',
 	long_description=long_description,
-	url='https://github.com/Vaelor/python-mattermost-driver',
-	author='Christian Plümer',
-	author_email='github@kuuku.net',
+	url='https://github.com/nyorf/python-time-driver',
+	author='Dmitry Dolgov',
+	author_email='me@nyorf.com',
 	license='MIT',
 	classifiers=[
 		'Development Status :: 5 - Production/Stable',
@@ -33,17 +33,17 @@ setup(
 		'Intended Audience :: Developers',
 		'Programming Language :: Python',
 		'Programming Language :: Python :: 3',
-		'Programming Language :: Python :: 3.5',
-		'Programming Language :: Python :: 3.6',
-		'Programming Language :: Python :: 3.7',
-		'Programming Language :: Python :: 3.8',
 		'Programming Language :: Python :: 3.9',
+		'Programming Language :: Python :: 3.10',
+		'Programming Language :: Python :: 3.11',
+		'Programming Language :: Python :: 3.12',
+		'Programming Language :: Python :: 3.13',
 	],
 	package_dir={'': 'src'},
 	packages=find_packages('src'),
-	python_requires=">=3.5",
+	python_requires=">=3.9",
 	install_requires=[
-		'websockets>=8',
-		'requests>=2.25'
+		'websockets>=14.0',
+		'requests>=2.32.0'
 	],
 )
