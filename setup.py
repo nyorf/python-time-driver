@@ -43,7 +43,7 @@ setup(
 	packages=find_packages('src'),
 	python_requires=">=3.9",
 	install_requires=[
-		'websockets>=14.0',
-		'requests==2.31.0'
+		'websockets>=14.1',
+		'requests==2.32.3'
 	],
 )
